@@ -14,10 +14,10 @@ Screenshots:
 Main Switchboard
 
 
-![screencap01.jpg](https://github.com/athiyadeviyani/FacialRecognition/blob/master/screencap01.jpeg)
+![screencap01.jpg](https://github.com/athiyadeviyani/FacialRecognition/blob/master/screencap01.jpg)
 
 
 Face Recognizer
 
 
-![screencap02.jpg](https://github.com/athiyadeviyani/FacialRecognition/blob/master/screencap02.jpeg)
+![screencap02.jpg](https://github.com/athiyadeviyani/FacialRecognition/blob/master/screencap02.jpg)
