@@ -69,7 +69,7 @@ def input():
             (x, y, w, h) = face_utils.rect_to_bb(face)
             cv2.rectangle(image, (x,y), (x+w, y+h), (255,0,0), 2)
             count+=1
-            cv2.imwrite("fixedface/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
+            cv2.imwrite("facedata/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
         
         cv2.imshow('FACE CAPTURE', image)
         k = cv2.waitKey(100) & 0xff
@@ -85,7 +85,7 @@ def input():
 ################################################## LEARNING PHASE ##################################################
 
 def learn():
-    path = 'fixedface'
+    path = 'facedata'
     recognizer = cv2.face.LBPHFaceRecognizer_create(); 
     detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
@@ -94,7 +94,7 @@ def learn():
         faceSamples=[]
         ids = []
         for imagePath in imagePaths:
-            if imagePath == 'fixedface/.DS_Store':
+            if imagePath == 'facedata/.DS_Store':
                 continue # ignores the .DS_Store file (hidden by default)
             PIL_img = PIL.Image.open(imagePath).convert('L') 
             img_numpy = np.array(PIL_img,'uint8')
