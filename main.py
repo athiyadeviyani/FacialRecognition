@@ -162,10 +162,10 @@ def recognize():
             probability = round(100 - confidence)
             
             # match has to be at least 40% to be recognized as a unique individual.
-            if (probability >= 40):
+            if (probability >= 60):
                 name = names[id - 1]
                 confidence = "  {0}%".format(probability)
-            elif (probability < 40):
+            elif (probability < 60):
                 id = "-"
                 name = "unknown"
                 confidence = " "
